@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Fade-in animation for employee cards */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Navbar Animations */
+.animate-navbar-title {
+  animation: navbarTitleFadeIn 0.7s cubic-bezier(.4,2,.6,1) both;
+}
+.animate-navbar-avatar {
+  animation: navbarAvatarPop 0.7s 0.2s cubic-bezier(.4,2,.6,1) both;
+}
+.animate-navbar-user {
+  animation: navbarUserFadeIn 0.7s 0.4s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes navbarTitleFadeIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.95);}
+  to { opacity: 1; transform: none;}
+}
+@keyframes navbarAvatarPop {
+  from { opacity: 0; transform: scale(0.7);}
+  to { opacity: 1; transform: scale(1);}
+}
+@keyframes navbarUserFadeIn {
+  from { opacity: 0; transform: translateX(20px);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Caveat font animation for Employee Dashboard */
+.animate-navbar-title-caveat {
+  animation: navbarTitleCaveat 1s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes navbarTitleCaveat {
+  0% { opacity: 0; transform: translateY(-40px) scale(0.8) rotate(-8deg);}
+  60% { opacity: 1; transform: translateY(10px) scale(1.08) rotate(2deg);}
+  100% { opacity: 1; transform: none;}
+}
